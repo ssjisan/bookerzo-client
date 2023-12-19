@@ -1,8 +1,7 @@
-import { Box, Button, Checkbox, FormControl, FormControlLabel, FormGroup, Grid, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select, TextField, Typography } from "@mui/material";
+import { Box, Button, Checkbox, FormControl, FormControlLabel, FormGroup, Grid, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from "@mui/material";
 import Logo from "../Assets/Logo";
 import { useState } from "react";
 import { EyeOff, EyeOn } from "../Assets/Icons";
-// import { DownArrow } from "../Assets/Icons";
 export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
 
@@ -55,7 +54,6 @@ export default function Login() {
                             <FormGroup>
                                 <FormControlLabel control={<Checkbox defaultChecked />} label="Remember me" />
                             </FormGroup>
-                            <Box><Typography variant="subtitle1" sx={{ textAlign: "right" }}>Forget password?</Typography></Box>
                             <Button variant="contained">Login</Button>
                         </Box>
                     </Box>
