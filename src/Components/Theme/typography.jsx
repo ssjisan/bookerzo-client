@@ -24,8 +24,11 @@
 
   
   // ----------------------------------------------------------------------
-  
+  export const primaryFont = 'Open Sans, sans-serif';
+
   export const typography = {
+    fontFamily: primaryFont,
+
     h1: {
       fontWeight: 700,
       lineHeight: "150%",
@@ -44,6 +47,21 @@
       fontSize: "20px",
     //   ...responsiveFontSizes({ sm: 26, md: 30, lg: 32 }),
     },
+    body1: {
+        fontWeight: 500,
+        lineHeight: "140%",
+        fontSize: "16px",
+    },
+    body2: {
+      fontWeight: 700,
+      lineHeight: "140%",
+      fontSize: "16px",
+  },
+    body3: {
+        fontWeight: 700,
+        lineHeight: "140%",
+        fontSize: "14px",
+    },
     subtitle1: {
       fontWeight: 400,
       lineHeight: "140%",
@@ -53,16 +71,6 @@
       fontWeight: 400,
       lineHeight: "140%",
       fontSize: "14px",
-    },
-    body1: {
-        fontWeight: 700,
-        lineHeight: "140%",
-        fontSize: "16px",
-    },
-    body2: {
-        fontWeight: 700,
-        lineHeight: "140%",
-        fontSize: "14px",
     },
     button: {
       fontWeight: 600,

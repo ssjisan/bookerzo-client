@@ -10,6 +10,19 @@ export function overrides(theme) {
                     boxSizing: 'border-box',
                 }
             },
+            html: {
+                margin: 0,
+                padding: 0,
+                width: '100%',
+                height: '100%',
+                WebkitOverflowScrolling: 'touch',
+            },
+            body: {
+                margin: 0,
+                padding: 0,
+                width: '100%',
+                height: '100%',
+            },
         },
         MuiButton: {
             styleOverrides: {
@@ -52,23 +65,14 @@ export function overrides(theme) {
                 },
             },
         },
-        // MuiOutlinedInput: {
-        //     styleOverrides: {
-        //         root: {
-        //             fontSize: "16px",
-        //             color: theme.palette.grey[500],
-        //             fontWeight: 500,
-        //             // height:"48px",
-        //             borderColor: theme.palette.grey[500],
-        //             "&:hover": {
-        //                 borderColor: "#fff",
-        //             },
-        //             "&.Mui-focused": {
-        //                 backgroundColor: "#fff",
-        //                 color: theme.palette.grey[900],
-        //             },
-        //         },
-        //     },
-        // }
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    color: theme.palette.grey[900],
+                    borderRadius: "8px",
+                    borderColor: theme.palette.grey[500],
+                },
+            },
+        },
     };
 }
