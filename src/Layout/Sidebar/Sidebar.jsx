@@ -10,6 +10,7 @@ import { Button, ListItem, ListItemButton, Typography } from "@mui/material";
 import Navbar from "../Navbar/Navbar";
 import { Sell } from "../../Assets/Icons";
 import Logo from "../../Assets/Logo";
+import SellBooks from "../../Components/SellBook/SellBooks";
 const drawerWidth = 280;
 
 function Sidebar(props) {
@@ -20,6 +21,16 @@ function Sidebar(props) {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+    // Sell Book Dialouge
+
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+    const handleClose = () => {
+      setOpen(false);
+    }
 
     const linkStyle = {
         textDecoration: "none",
@@ -33,10 +44,9 @@ function Sidebar(props) {
         <div>
             <Box sx={{ display: "flex", flexDirection: "column", gap: "40px", p: "16px" }}>
             <Logo />
-                <Button variant="contained" endIcon={<Sell />} sx={{boxShadow:"0px 8px 16px 0px rgba(118, 53, 220, 0.24)"}}>Sell Book</Button>
+                <Button variant="contained" endIcon={<Sell />} sx={{boxShadow:"0px 8px 16px 0px rgba(118, 53, 220, 0.24)"}} onClick={handleClickOpen}>Sell Book</Button>
                 <List>
                     {navConfig.map((item) => (
-                        <>
                             <Link to={item.link} style={linkStyle} key={item.id}>
                                 <ListItem
                                     key={item.id}
@@ -79,7 +89,6 @@ function Sidebar(props) {
                                     </ListItemButton>
                                 </ListItem>
                             </Link>
-                        </>
                     ))}
                 </List>
             </Box>
@@ -131,6 +140,7 @@ function Sidebar(props) {
                 >
                     {drawer}
                 </Drawer>
+                <SellBooks handleClose={handleClose} open={open}/>
             </Box>
         </Box>
     );

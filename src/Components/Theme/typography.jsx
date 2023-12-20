@@ -53,12 +53,12 @@
         fontSize: "16px",
     },
     body2: {
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: "140%",
       fontSize: "16px",
   },
     body3: {
-        fontWeight: 700,
+        fontWeight: 600,
         lineHeight: "140%",
         fontSize: "14px",
     },
