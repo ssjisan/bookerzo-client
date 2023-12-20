@@ -6,11 +6,10 @@ export default function Header() {
 //eslint-disable-next-line
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: "#F4F6F8",
-      color: "#757575",
+      backgroundColor: "#F3F3F3",
+      color: "#918EAF",
       fontWeight: "600",
       borderBottom: "none",
-      border:"1px solid red"
     },
     "&:first-child": {
       borderRadius: "10px 0px 0px 10px",
@@ -22,9 +21,9 @@ export default function Header() {
   return (
     <TableHead sx={{ borderRadius: "1em 0 0 1em" }}>
       <TableRow>
-        <StyledTableCell align="center"></StyledTableCell>
         <StyledTableCell align="center">Code</StyledTableCell>
-        <StyledTableCell align="center">Name</StyledTableCell>
+        <StyledTableCell align="left">Name</StyledTableCell>
+        <StyledTableCell align="center">Category</StyledTableCell>
         <StyledTableCell align="center">Writer</StyledTableCell>
         <StyledTableCell align="center">Publisher</StyledTableCell>
         <StyledTableCell align="center">Stock</StyledTableCell>

@@ -8,7 +8,14 @@ export function overrides(theme) {
             styleOverrides: {
                 '*': {
                     boxSizing: 'border-box',
-                }
+                },
+                '*::-webkit-scrollbar-thumb': {
+                    backgroundColor: 'red',
+                    borderRadius: '10px',
+                  },
+                  '*::-webkit-scrollbar-thumb:hover': {
+                    backgroundColor: '#000',
+                  }
             },
             html: {
                 margin: 0,

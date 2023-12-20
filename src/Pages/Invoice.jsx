@@ -1,9 +1,7 @@
-import { Box, Button, Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar, Typography } from "@mui/material";
 import Sidebar from "../Layout/Sidebar/Sidebar";
-import StateCard from "../Components/Dashboard/StateCard";
-import { AddIcon } from "../Assets/Icons";
 import BookListTable from "../Components/BookList/BookListTabel"
-export default function BookList() {
+export default function Invoice() {
 
     const drawerWidth = 280;
     return (
@@ -19,16 +17,14 @@ export default function BookList() {
             >
                 <Toolbar />
                 <Box sx={{
-                    paddingBottom: "20px", display: "flex", justifyContent: "space-between",
+                    paddingBottom: "20px", display: "flex", justifyContent: "flex-start",
                     alignItems: "center"
                 }}>
                     <Box sx={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                        <Typography variant="h2">Book List</Typography>
+                        <Typography variant="h2">Invoice</Typography>
                         <Typography variant="subtitle2" color="text.secondary">Home</Typography>
                     </Box>
-                    <Button variant="outlined" startIcon={<AddIcon />} sx={{ width: "160px" }}>Add Book</Button>
                 </Box>
-                <StateCard />
                 <BookListTable />
             </Box>
         </Box>

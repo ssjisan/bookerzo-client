@@ -21,7 +21,7 @@ export default function AccountPopOver() {
     return (
         <Box>
             <Button onClick={handleOpenPopOver}>
-                <Avatar src="avatar.png" alt="Rabiul Islam" variant="rounded" sx={{width:"40px", height:"40px"}}/>
+                <Avatar src="avatar.png" alt="Rabiul Islam" variant="rounded" sx={{ width: "40px", height: "40px" }} />
             </Button>
             <Menu
                 sx={{ mt: "52px" }}
@@ -84,9 +84,7 @@ export default function AccountPopOver() {
                         rabiulislam@gmail.com
                     </Typography>
                 </Box>
-                <Divider  variant="middle" sx={{ borderStyle: 'dashed' }} />
-               
-        <Divider  variant="middle" sx={{ borderStyle: 'dashed' }} />
+                <Divider variant="middle" sx={{ borderStyle: 'dashed' }} />
                 <MenuItem onClick={handleClosePopOver}>
                     <Typography
                         sx={{

@@ -1,4 +1,4 @@
-import { Box, Table, TableContainer } from "@mui/material";
+import { Box, Table, TableContainer, Typography } from "@mui/material";
 import { useState } from "react";
 import productData from "../../Assets/data.json";
 import Body from "./Table/Body";
@@ -8,6 +8,18 @@ import Pagination from "./Table/Pagination";
 export default function BookListTabel() {
     // eslint-disable-next-line
     const [product, setProduct] = useState(productData);
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
+
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(+event.target.value);
+        setPage(0);
+    };
+
     return (
         <Box
             sx={{
@@ -19,11 +31,14 @@ export default function BookListTabel() {
             }}
         >
             <TableContainer>
+                <Box sx={{ padding: "8px 24px", height: "64px" }}>
+                    <Typography>All Books</Typography>
+                </Box>
                 <Table>
                     <Header />
-                    <Body product={product} />
+                    <Body product={product} page={page} rowsPerPage={rowsPerPage}/>
                 </Table>
-                <Pagination product={product} />
+                <Pagination productLength={product.length} handleChangePage={handleChangePage} handleChangeRowsPerPage={handleChangeRowsPerPage} page={page} rowsPerPage={rowsPerPage}/>
             </TableContainer>
         </Box>
     );

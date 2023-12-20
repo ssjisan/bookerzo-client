@@ -1,5 +1,6 @@
-import { Box, IconButton, Modal, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Modal, Typography } from "@mui/material";
 import { Close } from "../../Assets/Icons";
+import InvoiceForm from "./Component/InvoiceForm";
 //eslint-disable-next-line
 export default function SellBooks({ open, handleClose }) {
     const style = {
@@ -8,7 +9,7 @@ export default function SellBooks({ open, handleClose }) {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: "calc(100% - 128px)",
-        height: "calc(100% - 80px)",
+        height: "calc(100% - 48px)",
         bgcolor: 'background.paper',
         boxShadow: 24,
         borderRadius: "10px",
@@ -24,7 +25,7 @@ export default function SellBooks({ open, handleClose }) {
             <Box sx={style}>
                 <Box sx={{
                     display: "flex",
-                    height: "64px",
+                    height: "56px",
                     padding: "8px 24px",
                     justifyContent: "space-between",
                     alignItems: "center",
@@ -36,6 +37,13 @@ export default function SellBooks({ open, handleClose }) {
                     <IconButton onClick={handleClose}>
                         <Close />
                     </IconButton>
+                </Box>
+                <Box>
+                    <Grid container>
+                        <Grid item lg={3}>
+                            <InvoiceForm/>
+                        </Grid>
+                    </Grid>
                 </Box>
             </Box>
         </Modal>

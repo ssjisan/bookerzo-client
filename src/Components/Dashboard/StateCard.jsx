@@ -18,7 +18,7 @@ export default function StateCard() {
     }, {
         id: 4,
         name: "Average Book Price",
-        count: "350 BDT"
+        count: "350tk"
     }, {
         id: 5,
         name: "Total Inventory Value",
