@@ -22,7 +22,7 @@ export default function Dashboard() {
         <Box sx={{ paddingBottom: "20px" }}>
           <Box sx={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             <Typography variant="h2">Dashboard</Typography>
-            <Typography variant="subtitle2" color="text.secondary">Home</Typography>
+            <Typography variant="body3" color="text.primary">Home</Typography>
           </Box>
         </Box>
         <StateCard />

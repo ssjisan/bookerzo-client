@@ -1,5 +1,4 @@
 import {
-    Button,
     Typography,
     Avatar,
     Menu,
@@ -20,11 +19,37 @@ export default function AccountPopOver() {
 
     return (
         <Box>
-            <Button onClick={handleOpenPopOver}>
-                <Avatar src="avatar.png" alt="Rabiul Islam" variant="rounded" sx={{ width: "40px", height: "40px" }} />
-            </Button>
+            <Avatar variant="rounded" sx={{ width: "40px", height: "40px", cursor: "pointer", backgroundColor: "#F0F0F0", color: "#060415" }} onClick={handleOpenPopOver} />
             <Menu
-                sx={{ mt: "52px" }}
+                sx={{
+                    mt: "32px",
+                    "& .MuiPaper-root": {
+                        overflow: "visible",
+                        borderRadius: "12px",
+                        filter: "drop-shadow(0px 0px 2px rgba(145, 158, 171, 0.24))",
+                        mt: 1.5,
+                        boxShadow: "-20px 20px 40px -4px rgba(145, 158, 171, 0.24)",
+                        padding: "8px 16px",
+                    },
+                    "& .MuiAvatar-root": {
+                        width: 32,
+                        height: 32,
+                        ml: -0.5,
+                        mr: 1,
+                    },
+                    "&:before": {
+                        content: '""',
+                        display: "block",
+                        position: "absolute",
+                        top: 0,
+                        right: 14,
+                        width: 10,
+                        height: 10,
+                        bgcolor: "background.paper",
+                        transform: "translateY(-50%) rotate(45deg)",
+                        zIndex: 0,
+                    },
+                }}
                 id="menu-appbar"
                 anchorEl={accountPopOver}
                 anchorOrigin={{
@@ -38,35 +63,6 @@ export default function AccountPopOver() {
                 }}
                 open={accountPopOver}
                 onClose={handleClosePopOver}
-                PaperProps={{
-                    elevation: 0,
-                    sx: {
-                        overflow: "visible",
-                        borderRadius: "12px",
-                        filter: "drop-shadow(0px 0px 2px rgba(145, 158, 171, 0.24))",
-                        mt: 1.5,
-                        boxShadow:
-                            "-20px 20px 40px -4px rgba(145, 158, 171, 0.24)",
-                        "& .MuiAvatar-root": {
-                            width: 32,
-                            height: 32,
-                            ml: -0.5,
-                            mr: 1,
-                        },
-                        "&:before": {
-                            content: '""',
-                            display: "block",
-                            position: "absolute",
-                            top: 0,
-                            right: 14,
-                            width: 10,
-                            height: 10,
-                            bgcolor: "background.paper",
-                            transform: "translateY(-50%) rotate(45deg)",
-                            zIndex: 0,
-                        },
-                    },
-                }}
             >
                 <Box
                     sx={{
@@ -74,18 +70,20 @@ export default function AccountPopOver() {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "flex-start",
-                        p: 2,
+                        mb: "16px"
                     }}
                 >
-                    <Typography sx={{ fontSize: "16px", fontWeight: 600 }}>
-                        Rabiul Islam Babu
+                    <Typography variant="body2" color="text.primary">
+                        bookerzo@info.com
                     </Typography>
-                    <Typography sx={{ fontSize: "14px", fontWeight: 400 }}>
-                        rabiulislam@gmail.com
+                    <Typography variant="subtitle2" color="text.secondary">
+                        Admin
                     </Typography>
                 </Box>
-                <Divider variant="middle" sx={{ borderStyle: 'dashed' }} />
-                <MenuItem onClick={handleClosePopOver}>
+                <Divider variant="middle" sx={{ borderStyle: 'dashed', }} />
+                <MenuItem onClick={handleClosePopOver} sx={{
+                    mt: "8px",
+                }}>
                     <Typography
                         sx={{
                             fontSize: "14px",

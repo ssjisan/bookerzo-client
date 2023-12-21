@@ -1,15 +1,18 @@
 import { Autocomplete, Box, Button, TextField, Typography } from "@mui/material";
 import { AddIcon, DownArrow } from "../../Assets/Icons";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import AddCategory from "./AddCategory";
 import AddPublisher from "./AddPublisher";
 import category from "../../Assets/category.json"
 import publisher from "../../Assets/publisher.json"
+import { DataContext } from "../../DataProcessing/DataProcessing";
 export default function AddBookForm() {
+    const {
+        handleOpenCategoryModal
+    } = useContext(DataContext);
     //eslint-disable-next-line
     const [publisherName, setPublisherName] = useState('');
     const [categoryName, setCategoryName] = useState('');
-    const [openCategory, setOpenCategory] = useState(false);
     const [openPublisher, setOpenPublisher] = useState(false);
     //eslint-disable-next-line
     const handlePublisher = (event) => {
@@ -19,12 +22,7 @@ export default function AddBookForm() {
     const handleCategory = (event) => {
         setCategoryName(event.target.value);
     };
-    const handleOpenCategory = () => {
-        setOpenCategory(true)
-    }
-    const handleCloseCategory = () => {
-        setOpenCategory(false)
-    }
+
     const handleOpenPublisher = () => {
         setOpenPublisher(true)
     }
@@ -67,7 +65,7 @@ export default function AddBookForm() {
                     sx={{ width: 372 }}
                     renderInput={(params) => <TextField placeholder="Select a Category" {...params} variant="outlined" />}
                 />
-                <Box sx={{ height: "36px", display: "flex", alignItems: "center", p: "6px 12px", cursor: "pointer" }} onClick={handleOpenCategory}>
+                <Box sx={{ height: "36px", display: "flex", alignItems: "center", p: "6px 12px", cursor: "pointer" }} onClick={handleOpenCategoryModal}>
                     <AddIcon /> &nbsp; <Typography sx={{ color: "#05A043" }}>Add a New Category</Typography>
                 </Box>
             </Box>
@@ -142,7 +140,7 @@ export default function AddBookForm() {
                 <Button variant="outlined" sx={{ width: "120px" }}>Back</Button>
                 <Button variant="contained" sx={{ width: "120px" }}>Save</Button>
             </Box>
-            <AddCategory handleCloseCategory={handleCloseCategory} openCategory={openCategory} />
+            <AddCategory />
             <AddPublisher handleClosePublisher={handleClosePublisher} openPublisher={openPublisher} />
         </Box >
     )

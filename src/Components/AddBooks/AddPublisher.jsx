@@ -40,7 +40,7 @@ export default function AddCategory({ handleClosePublisher, openPublisher }) {
         </Box>
         <Box sx={{ p: "24px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <Box sx={{ display: "flex", gap: "8px", flexDirection: "column", alignItems: "center", mb: "24px" }}>
-            <Typography sx={{ width: "372px" }} variant="susbtitle2" color="text.primary">Publisher Id</Typography>
+            <Typography sx={{ width: "372px" }} variant="subtitle2" color="text.primary">Publisher Id</Typography>
             <TextField
               sx={{ width: "372px" }}
               variant="outlined"
@@ -52,7 +52,7 @@ export default function AddCategory({ handleClosePublisher, openPublisher }) {
             />
           </Box>
           <Box sx={{ display: "flex", gap: "8px", flexDirection: "column", alignItems: "center", mb: "24px" }}>
-            <Typography sx={{ width: "372px" }} variant="susbtitle2" color="text.primary">Publisher Name</Typography>
+            <Typography sx={{ width: "372px" }} variant="subtitle2" color="text.primary">Publisher Name</Typography>
             <TextField
               sx={{ width: "372px" }}
               variant="outlined"

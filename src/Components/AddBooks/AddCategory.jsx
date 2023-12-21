@@ -1,7 +1,10 @@
 import { Box, Button, IconButton, Modal, TextField, Typography } from "@mui/material";
 import { Close } from "../../Assets/Icons";
+import { useContext } from "react";
+import { DataContext } from "../../DataProcessing/DataProcessing";
 //eslint-disable-next-line
-export default function AddCategory({ handleCloseCategory, openCategory }) {
+export default function AddCategory() {
+    const { handleCloseCategoryModal, openCategoryModal, handleSave, handleNewCategory, categoryCollection } = useContext(DataContext)
     const style = {
         position: 'absolute',
         top: '50%',
@@ -16,8 +19,8 @@ export default function AddCategory({ handleCloseCategory, openCategory }) {
     };
     return (
         <Modal
-            open={openCategory}
-            onClose={handleCloseCategory}
+            open={openCategoryModal}
+            onClose={handleCloseCategoryModal}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
@@ -33,13 +36,13 @@ export default function AddCategory({ handleCloseCategory, openCategory }) {
                     background: "#FAF8FF"
                 }}>
                     <Typography variant="body2">Add a New Category</Typography>
-                    <IconButton onClick={handleCloseCategory}>
+                    <IconButton onClick={handleCloseCategoryModal}>
                         <Close />
                     </IconButton>
                 </Box>
                 <Box sx={{ p: "24px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <Box sx={{ display: "flex", gap: "8px", flexDirection: "column", alignItems: "center", mb: "24px" }}>
-                        <Typography sx={{ width: "372px" }} variant="susbtitle2" color="text.primary">Category Id</Typography>
+                        <Typography sx={{ width: "372px" }} variant="subtitle2" color="text.primary">Category Id</Typography>
                         <TextField
                             sx={{ width: "372px" }}
                             variant="outlined"
@@ -51,14 +54,16 @@ export default function AddCategory({ handleCloseCategory, openCategory }) {
                         />
                     </Box>
                     <Box sx={{ display: "flex", gap: "8px", flexDirection: "column", alignItems: "center", mb: "24px" }}>
-                        <Typography sx={{ width: "372px" }} variant="susbtitle2" color="text.primary">Category Name</Typography>
+                        <Typography sx={{ width: "372px" }} variant="subtitle2" color="text.primary">Category Name</Typography>
                         <TextField
                             sx={{ width: "372px" }}
                             variant="outlined"
-                            name="Book Name"
+                            name="categoryName"
                             hiddenLabel
                             size="small"
                             placeholder="Category Name"
+                            value={categoryCollection.categoryName}
+                            onChange={(e) => handleNewCategory(e)}
                         />
                     </Box>
                     <Box sx={{
@@ -69,8 +74,8 @@ export default function AddCategory({ handleCloseCategory, openCategory }) {
                         gap: "24px",
                         mt: "16px"
                     }}>
-                        <Button variant="outlined" sx={{ width: "120px" }}>Back</Button>
-                        <Button variant="contained" sx={{ width: "120px" }}>Save</Button>
+                        <Button variant="outlined" sx={{ width: "120px" }} onClick={handleCloseCategoryModal}>Back</Button>
+                        <Button variant="contained" sx={{ width: "120px" }} onClick={handleSave}>Save</Button>
                     </Box>
                 </Box>
             </Box>
