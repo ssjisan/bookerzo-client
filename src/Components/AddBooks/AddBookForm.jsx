@@ -35,7 +35,7 @@ export default function AddBookForm() {
     return (
         <Box sx={{ mt: "40px" }}>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Book Code</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Book Code</Typography>
                 <TextField
                     sx={{ width: "372px" }}
                     variant="outlined"
@@ -47,7 +47,7 @@ export default function AddBookForm() {
                 />
             </Box>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Book Name</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Book Name</Typography>
                 <TextField
                     sx={{ width: "372px" }}
                     variant="outlined"
@@ -58,7 +58,7 @@ export default function AddBookForm() {
                 />
             </Box>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Book Category</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Book Category</Typography>
                 <Autocomplete
                     hiddenLabel="true"
                     popupIcon={<DownArrow />}
@@ -72,7 +72,7 @@ export default function AddBookForm() {
                 </Box>
             </Box>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Writer</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Writer</Typography>
                 <TextField
                     sx={{ width: "372px" }}
                     variant="outlined"
@@ -82,7 +82,7 @@ export default function AddBookForm() {
                 />
             </Box>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Publisher</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Publisher</Typography>
                 <Autocomplete
                     hiddenLabel="true"
                     popupIcon={<DownArrow />}
@@ -96,7 +96,7 @@ export default function AddBookForm() {
                 </Box>
             </Box>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Qty</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Qty</Typography>
                 <TextField
                     sx={{ width: "372px" }}
                     variant="outlined"
@@ -108,7 +108,7 @@ export default function AddBookForm() {
                 />
             </Box>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Purchase Price</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Purchase Price</Typography>
                 <TextField
                     sx={{ width: "372px" }}
                     variant="outlined"
@@ -120,7 +120,7 @@ export default function AddBookForm() {
                 />
             </Box>
             <Box sx={{ display: "flex", gap: "24px", alignItems: "center", mb: "24px" }}>
-                <Typography sx={{ width: "240px" }} variant="susbtitle2" color="text.primary">Sell Price</Typography>
+                <Typography sx={{ width: "240px" }} variant="subtitle2" color="text.primary">Sell Price</Typography>
                 <TextField
                     sx={{ width: "372px" }}
                     variant="outlined"

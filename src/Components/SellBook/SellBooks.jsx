@@ -9,7 +9,7 @@ export default function SellBooks({ open, handleClose }) {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: "calc(100% - 128px)",
-        height: "calc(100% - 48px)",
+        height: "calc(100% - 40px)",
         bgcolor: 'background.paper',
         boxShadow: 24,
         borderRadius: "10px",
